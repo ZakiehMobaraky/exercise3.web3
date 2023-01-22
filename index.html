@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .calculater_custom{
+            border: 5px solid blueviolet;
+            border-radius: 5px;
+            padding: 15px 4px;
+            background-color: pink;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            color: aliceblue;
+            font-size: 35px;
+        }
+
+        .button_custom{
+            border: 5px solid blueviolet;
+            border-radius: 5px;
+            padding: 8px 6px;
+            background-color: blueviolet;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            color: aliceblue;
+            font-size: 30px;
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <input class="calculater_custom" type="text">
+    <br>
+    <input  class="calculater_custom"type="text">
+    <br>
+    
+    <button class="button_custom" onclick="clickHandler()">click me</button>
+    <p id="result"></p>
+
+    <script>
+
+        function clickHandler(){
+            let num0=document.getElementsByTagName('input')[0].value;
+            let num1=document.getElementsByTagName('input')[1].value;
+            let sum=Number(num0)+Number(num1);
+            let min=Number(num0)- Number(num1);
+            let mul=Number(num0)* Number(num1);
+            let div=Number(num0)/Number(num1);
+            document.getElementById('result').innerHTML="sum : "+ sum + '<br>' ;
+            document.getElementById('result').innerHTML+="min : "+ min + '<br>' ;
+            document.getElementById('result').innerHTML+="mul : "+ mul + '<br>' ;
+            document.getElementById('result').innerHTML+="div : "+ div + '<br>' ;
+            document.getElementById('result').innerHTML+="avg : "+ (sum/2) ; 
+        }
+        
+
+
+    </script>
+</body>
+</html>
